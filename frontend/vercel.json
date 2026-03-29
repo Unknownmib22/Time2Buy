@@ -1,22 +1,12 @@
 {
   "version": 2,
   "buildCommand": "npm run build",
-  "outputDirectory": "frontend/dist",
+  "outputDirectory": "dist",
   "framework": null,
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/backend/server.js"
-    },
-    {
       "source": "/(.*)",
       "destination": "/$1"
-    }
-  ],
-  "crons": [
-    {
-      "path": "/api/cron/price-decay",
-      "schedule": "0 0 * * *"
     }
   ]
 }
