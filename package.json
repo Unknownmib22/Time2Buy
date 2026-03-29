@@ -6,6 +6,6 @@
     "backend"
   ],
   "scripts": {
-    "build": "npm run build --workspace=frontend"
+    "build": "echo Use frontend or backend workspaces"
   }
 }
