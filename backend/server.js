@@ -11,6 +11,7 @@ import productRoutes from './routes/productRoutes.js';
 dotenv.config();
 
 const app = express();
+const API_HOST = process.env.API_HOST || `http://localhost:${process.env.PORT || 5050}`;
 app.use(cors());
 app.use(express.json());
 
@@ -19,7 +20,7 @@ app.use('/api/products', productRoutes);
 
 // Healthcheck
 app.get('/api/health', (req, res) => {
-    res.json({ status: 'ok', time: new Date(), env: process.env.NODE_ENV || 'development' });
+    res.json({ status: 'ok', time: new Date(), env: process.env.NODE_ENV || 'development', host: API_HOST });
 });
 
 // Database Connection Helper (Serverless Friendly)

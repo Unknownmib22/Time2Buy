@@ -11,6 +11,7 @@ services:
         sync: false # User will set this in Render UI
       - key: NODE_ENV
         value: production
+    healthCheckPath: /api/health
 
   # Frontend Static Site
   - type: web
