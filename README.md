@@ -1,3 +1,5 @@
+To view our product demo : https://youtu.be/RGUt-_pUU7E?si=Nvb4wMr-PGpeF18D
+To view presentation of t2b : https://drive.google.com/drive/folders/1eE4PZ6LStDBmVTejjG2Pxtk-I5H4BWp_?usp=sharing
 Time to Buy (T2B)
 A hyperlocal inventory lifecycle engine that ensures every product gets sold before it becomes waste.
 Our Problem Statement :
