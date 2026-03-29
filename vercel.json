@@ -1,7 +1,8 @@
 {
   "version": 2,
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/backend/server.js" }
+    { "source": "/api/(.*)", "destination": "/backend/server.js" },
+    { "source": "/(.*)", "destination": "/index.html" }
   ],
   "builds": [
     {
@@ -19,5 +20,7 @@
       "path": "/api/cron",
       "schedule": "0 0 * * *"
     }
-  ]
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
 }

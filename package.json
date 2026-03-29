@@ -1,0 +1,11 @@
+{
+  "name": "time2buy-monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "build": "echo 'Building monorepo...'"
+  }
+}
