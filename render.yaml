@@ -13,11 +13,12 @@ services:
         value: production
 
   # Frontend Static Site
-  - type: static_site
+  - type: web
     name: time2buy-frontend
+    runtime: static
     rootDir: frontend
     buildCommand: npm install && npx expo export -p web
-    staticPublishDir: dist
+    publishPath: dist
     envVars:
       - key: EXPO_PUBLIC_API_URL
         sync: false # User will set this to the Backend URL + /api
