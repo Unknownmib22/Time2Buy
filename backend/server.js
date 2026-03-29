@@ -41,18 +41,16 @@ app.use(async (req, res, next) => {
   next();
 });
 
-// Local Development listen
-if (process.env.NODE_ENV !== 'production') {
-  const PORT = process.env.PORT || 5000;
-  app.listen(PORT, () => {
-    console.log(`🚀 Development server running on port ${PORT}`);
-    // Initialize Local Background Cron Jobs
-    cron.schedule('0 0 * * *', () => { 
-       console.log('⏰ Running Price Decay Job (Local)');
-       pricingEngineCron();
-    });
+// Server listen (Persistent hosting like Render)
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`🚀 Server running on port ${PORT}`);
+  // Initialize Background Cron Jobs
+  cron.schedule('0 0 * * *', () => { 
+     console.log('⏰ Running Price Decay Job');
+     pricingEngineCron();
   });
-}
+});
 
 // Export the app for Vercel
 export default app;
