@@ -18,7 +18,7 @@ services:
     runtime: static
     rootDir: frontend
     buildCommand: npm install && npx expo export -p web
-    publishPath: dist
+    staticPublishPath: dist
     envVars:
       - key: EXPO_PUBLIC_API_URL
         sync: false # User will set this to the Backend URL + /api
