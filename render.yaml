@@ -13,7 +13,7 @@ services:
         value: production
 
   # Frontend Static Site
-  - type: static
+  - type: static_site
     name: time2buy-frontend
     rootDir: frontend
     buildCommand: npm install && npx expo export -p web
